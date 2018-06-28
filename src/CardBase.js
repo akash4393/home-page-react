@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import verticalHeading from './verticalHeading.js';
+import functionalComponents from './functionalComponents.js';
 import './css/cardBase.css'
 
 class CardBase extends Component {
@@ -10,10 +10,10 @@ class CardBase extends Component {
 
 	render() {
 		let cardStyle = this.props.cardStyle;
-		console.log(verticalHeading);
+		console.log(functionalComponents);
 		return(
 			<div className="card-base-container" style={cardStyle}>
-				{verticalHeading('Test', 'test')}
+				{functionalComponents.verticalHeading('Test', 'test')}
 			</div>
 		);
 	}

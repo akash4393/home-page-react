@@ -6,8 +6,8 @@ import CardBase from './CardBase.js';
 class App extends Component {
   render() {
     let cardStyle = {
-      width: '500px',
-      height: '300px',
+      width: '85%',
+      height: '98%',
       top: '50px',
       left: '50px',
       background: '#DDDDDD'

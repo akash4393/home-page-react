@@ -1,0 +1,15 @@
+.photo-card {
+	left: 96%;
+	width: 95%;
+	height: 98%;
+	background: #c0d4ad;
+	transition: left 100ms;
+}
+
+.photo-card:hover {
+	left: 95%;
+}
+
+.photography-vertical {
+	top: 9%;
+}

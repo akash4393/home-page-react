@@ -1,0 +1,15 @@
+.resume-card {
+	left: 92%;
+	width: 95%;
+	height: 98%;
+	background: #ffa08b;
+	transition: left 100ms;
+}
+
+.resume-card:hover {
+	left: 91%;
+}
+
+.resume-vertical {
+	top: 29.5%;
+}

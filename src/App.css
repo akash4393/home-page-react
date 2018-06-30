@@ -26,6 +26,8 @@
   width: auto;
   height: auto;
   position: absolute;
+  top: 40%;
+  left: 1%;
 }
 
 @keyframes App-logo-spin {

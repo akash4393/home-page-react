@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import functionalComponents from './functionalComponents.js';
 import './css/cardBase.css'
 
 class CardBase extends Component {
@@ -9,11 +8,9 @@ class CardBase extends Component {
 	};
 
 	render() {
-		let cardStyle = this.props.cardStyle;
-		console.log(functionalComponents);
 		return(
-			<div className="card-base-container" style={cardStyle}>
-				{functionalComponents.verticalHeading('Test', 'test')}
+			<div className={`card-base-container ${this.props.customClass}`} style={this.props.cardStyle}>
+				{this.props.children.map(child => (child))}
 			</div>
 		);
 	}

@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class functionalComponents {
+class functionalComponentsClass {
 	verticalHeading(headingText, customClass) {
 		let charactersOfHeadingArray = headingText.split('');
 		customClass = (customClass) ? customClass : '';
 		return(
-			<div className={`vertical-heading ${customClass}`}>
+			<div key={headingText + Math.random()} className={`vertical-heading ${customClass}`}>
 				<h1>
 					{charactersOfHeadingArray.map((char, index) => {
 						return(<div key={index}>{char}</div>);
@@ -17,12 +17,14 @@ class functionalComponents {
 
 	horizontalHeading(headingText, customClass) {
 		return(
-			<div className={`horizontal-heading ${customClass}`}>
+			<div key={headingText + Math.random()} className={`horizontal-heading ${customClass}`}>
 				<h1>{headingText}</h1>
 			</div>
 		);
 	}
 };
 
-export default new functionalComponents();
+let functionalComponents = new functionalComponentsClass();
+
+export default functionalComponents;
 

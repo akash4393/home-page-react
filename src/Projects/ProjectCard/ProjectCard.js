@@ -1,3 +1,11 @@
+'use strict';
+
+/*
+@author Akash Singh
+@email contact@akashsingh.io
+@web akashsingh.io
+*/
+
 import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';

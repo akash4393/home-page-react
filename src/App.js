@@ -1,3 +1,11 @@
+'use strict';
+
+/*
+@author Akash Singh
+@email contact@akashsingh.io
+@web akashsingh.io
+*/
+
 import React, { Component } from 'react';
 import './App.css';
 import HomeCard from './Home/HomeCard.js';

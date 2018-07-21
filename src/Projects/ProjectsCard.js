@@ -1,3 +1,11 @@
+'use strict';
+
+/*
+@author Akash Singh
+@email contact@akashsingh.io
+@web akashsingh.io
+*/
+
 import React, { Component } from 'react';
 import CardBase from '../common/Card/CardBase.js';
 import functionalComponents from '../common/functionalComponents/functionalComponents.js';

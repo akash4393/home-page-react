@@ -1,15 +1,28 @@
 .photo-card {
-	left: 96%;
-	width: 95%;
-	height: 98%;
+	top: 0%;
+	left: 99%;
+	width: 94%;
+	height: 100%;
 	background: #c0d4ad;
-	transition: left 100ms;
+	transition: left 200ms;
 }
 
-.photo-card:hover {
+.photo-card.hide:hover {
 	left: 95%;
+	transition: left 200ms;
 }
 
 .photography-vertical {
-	top: 9%;
+	top: 45%;
+	left: -5.25%;
+}
+
+.photo-card.show {
+	left: 6%;
+	transition: left 500ms;
+}
+
+.photo-card.hide {
+	left: 98%;
+	transition: left 500ms;
 }

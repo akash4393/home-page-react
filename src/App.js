@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import './App.css';
-import HomeCard from './HomeCard.js';
-import ProjectsCard from './ProjectsCard.js';
-import ResumeCard from './ResumeCard.js';
-import PhotoCard from './PhotoCard.js';
+import HomeCard from './Home/HomeCard.js';
+import ProjectsCard from './Projects/ProjectsCard.js';
+import ResumeCard from './Resume/ResumeCard.js';
+import PhotoCard from './Photography/PhotoCard.js';
 
 class App extends Component {
   render() {

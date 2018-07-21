@@ -1,5 +1,10 @@
+body {
+  overflow: hidden;
+}
+
 .App {
   text-align: center;
+  overflow: hidden;
 }
 
 .App-logo {
@@ -20,14 +25,6 @@
 
 .App-intro {
   font-size: large;
-}
-
-.vertical-heading {
-  width: auto;
-  height: auto;
-  position: absolute;
-  top: 40%;
-  left: 1%;
 }
 
 @keyframes App-logo-spin {

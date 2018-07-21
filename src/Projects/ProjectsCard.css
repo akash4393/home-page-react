@@ -1,0 +1,56 @@
+.projects-card {
+	top: 0%;
+	left: 97%;
+	width: 94%;
+	height: 100%;
+	background: #98eeff;
+	transition: left 200ms;
+}
+
+.projects-card.hide:hover {
+	left: 91%;
+	transition: left 200ms;
+}
+
+.projects-vertical {
+	top: 45%;
+	left: -2.5%;
+}
+
+.projects-card.show {
+	left: 2%;
+	transition: left 500ms;
+}
+
+.projects-card.hide {
+	left: 94%;
+	transition: left 500ms;
+}
+
+.project-card-test-1 {
+	position: absolute;
+	width: 30%;
+	left: 10%;
+	top: 15%;
+}
+
+.project-card-test-2 {
+	position: absolute;
+	width: 30%;
+	left: 60%;
+	top: 15%;
+}
+
+.project-card-test-3 {
+	position: absolute;
+	width: 30%;
+	top: 55%;
+	left: 10%;
+}
+
+.project-card-test-4 {
+	position: absolute;
+	width: 30%;
+	top: 55%;
+	left: 60%;
+}

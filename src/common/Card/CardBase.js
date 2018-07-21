@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './css/cardBase.css'
+import './CardBase.css'
 
 class CardBase extends Component {
 	constructor(props) {
@@ -9,7 +9,7 @@ class CardBase extends Component {
 
 	render() {
 		return(
-			<div className={`card-base-container ${this.props.customClass}`} style={this.props.cardStyle}>
+			<div onClick={this.props.onClick} className={`card-base-container ${this.props.customClass}`} style={this.props.cardStyle}>
 				{this.props.children.map(child => (child))}
 			</div>
 		);

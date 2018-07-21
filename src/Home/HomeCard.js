@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import CardBase from './CardBase.js';
-import functionalComponents from './functionalComponents.js'
+import CardBase from '../common/Card/CardBase.js';
+import functionalComponents from '../common/functionalComponents/functionalComponents.js'
 
 class HomeCard extends Component {
 	constructor(props) {
@@ -16,10 +16,10 @@ class HomeCard extends Component {
 		this.style = {
 			width: '100%',
 			height: '100%',
-			background: '#fcf0da'
+			background: '#dddddd'
 		}
-		let horizontalHeading = functionalComponents.horizontalHeading('ABOUT', '');
-		let verticalHeading = functionalComponents.verticalHeading('ABOUT', '');
+		let horizontalHeading = functionalComponents.horizontalHeading('Akash Singh', '');
+		let verticalHeading = functionalComponents.verticalHeadingRotatedText('', '');
 		this.children.push(horizontalHeading);
 		this.children.push(verticalHeading);
 	}

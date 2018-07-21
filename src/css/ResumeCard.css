@@ -1,15 +1,28 @@
 .resume-card {
-	left: 92%;
-	width: 95%;
-	height: 98%;
+	top: 0%;
+	left: 98%;
+	width: 94%;
+	height: 100%;
 	background: #ffa08b;
-	transition: left 100ms;
+	transition: left 200ms;
 }
 
-.resume-card:hover {
-	left: 91%;
+.resume-card.hide:hover {
+	left: 93%;
+	transition: left 200ms;
 }
 
 .resume-vertical {
-	top: 29.5%;
+	top: 45%;
+	left: -2.75%;
+}
+
+.resume-card.show {
+	left: 4%;
+	transition: left 500ms;
+}
+
+.resume-card.hide {
+	left: 96%;
+	transition: left 500ms;
 }

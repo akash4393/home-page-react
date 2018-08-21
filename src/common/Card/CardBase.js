@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import './CardBase.css'
 
+/*
+props expects children property of Map type. 
+props.children = new Map([componentName, reactComponent]);
+*/
 class CardBase extends Component {
 	constructor(props) {
 		super(props);
@@ -10,7 +14,7 @@ class CardBase extends Component {
 	render() {
 		return(
 			<div onClick={this.props.onClick} className={`card-base-container ${this.props.customClass}`} style={this.props.cardStyle}>
-				{this.props.children.map(child => (child))}
+				{Array.from(this.props.children).map(([key, child]) => (child))}
 			</div>
 		);
 	}

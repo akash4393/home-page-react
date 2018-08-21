@@ -1,4 +1,3 @@
-'use strict';
 
 /*
 @author Akash Singh
@@ -10,13 +9,14 @@ import React, { Component } from 'react';
 import CardBase from '../common/Card/CardBase.js';
 import functionalComponents from '../common/functionalComponents/functionalComponents.js';
 import SimpleMediaCard from './ProjectCard/ProjectCard.js';
+import PROJECTS_CARD_DATA from './ProjectsCardData.js';
 import './ProjectsCard.css'
 
 class ProjectsCard extends Component {
 	constructor(props) {
 		super(props);
 		this.props = props;
-		this.children = [];
+		this.children = new Map([]);
 		this.style = {};
 		this.state = {
 			hidden: true
@@ -26,37 +26,47 @@ class ProjectsCard extends Component {
 	}
 
 	initializeChildren() {
-		this.children = [];
+		this.children = new Map([]);
 
 		let toggleArrow = functionalComponents.arrowComponent(this.state.hidden, 'projects-arrow', this.showProjectsCard.bind(this));
-		this.children.push(toggleArrow)
+		this.children.set('toggleArrow', toggleArrow);
 
 		let horizontalHeading = functionalComponents.horizontalHeading('Projects', 'projects-horizontal');
-		this.children.push(horizontalHeading);
+		this.children.set('horizontalHeading', horizontalHeading);
 
-		let simpleCard1 = SimpleMediaCard({
-			'card': 'project-card-test-1',
-			'media': 'test'
+		let libsignalProtocolExample = SimpleMediaCard({
+			'card': 'libsignal-card',
+			'media': {
+				className: 'libsignal-card-media'
+			},
+			'data': PROJECTS_CARD_DATA.libsignal_protocol_javascript_example
 		});
-		this.children.push(simpleCard1);
+		this.children.set('libsignalProtocolExample', libsignalProtocolExample);
 
-		let simpleCard2 = SimpleMediaCard({
-			'card': 'project-card-test-2',
-			'media': 'test'
+		let ageOfMythology = SimpleMediaCard({
+			'card': 'age-of-mythology-card',
+			'media': {
+				className: 'age-of-mythology-media'
+			},
+			'data': PROJECTS_CARD_DATA.age_of_mythology
 		});
-		this.children.push(simpleCard2);
+		this.children.set('ageOfMythology', ageOfMythology);
 
-		let simpleCard3 = SimpleMediaCard({
-			'card': 'project-card-test-3',
-			'media': 'test'
+		let aLeafStory = SimpleMediaCard({
+			'card': 'a-leaf-story-card',
+			'media': {
+				className: 'a-leaf-story-media'
+			},
+			'data': PROJECTS_CARD_DATA.a_leaf_story
 		});
-		this.children.push(simpleCard3);
+		this.children.set('aLeafStory', aLeafStory);
 
-		let simpleCard4 = SimpleMediaCard({
-			'card': 'project-card-test-4',
-			'media': 'test'
+		let emailSecurity = SimpleMediaCard({
+			'card': 'email-security-card',
+			'media': 'test',
+			'data': PROJECTS_CARD_DATA.email_security
 		});
-		this.children.push(simpleCard4);
+		this.children.set('emailSecurity', emailSecurity);
 	}
 
 	showProjectsCard() {
@@ -65,7 +75,6 @@ class ProjectsCard extends Component {
 	}
 
 	render() {
-		this.initializeChildren();
 		let classes = 'projects-card ' + ((this.state.hidden) ? 'hide' : 'show');
 		return(
 			<CardBase 

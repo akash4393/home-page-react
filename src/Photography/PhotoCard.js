@@ -7,7 +7,7 @@ class PhotoCard extends Component {
 	constructor(props) {
 		super(props);
 		this.props = props;
-		this.children = [];
+		this.children = new Map([]);
 		this.style = {};
 		this.state = {
 			hidden: true
@@ -17,11 +17,11 @@ class PhotoCard extends Component {
 	}
 
 	initializeChildren(){
-		this.children = [];
+		this.children = new Map([]);
 		let horizontalHeading = functionalComponents.horizontalHeading('Photography', 'photography-horizontal');
 		let verticalHeading = functionalComponents.verticalHeadingRotatedText('Photography', 'photography-vertical', this.state.hidden);
-		this.children.push(horizontalHeading);
-		this.children.push(verticalHeading);
+		this.children.set('horizontalHeading', horizontalHeading);
+		this.children.set('verticalHeading', verticalHeading);
 	}
 
 	showPhotographyCard() {

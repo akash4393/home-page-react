@@ -1,45 +1,27 @@
-.vertical-heading {
-  width: auto;
-  height: auto;
-  position: absolute;
-  top: 40%;
-  left: 1%;
-}
 
-.vertical-heading-rotated {
-  width: auto;
-  height: auto;
-  position: absolute;
-  top: 40%;
-  left: 0%;
-  transform: rotate(270deg)
-}
-
-.vertical-heading-rotated > h1 {
-  margin: 0px;
-}
-
-.vertical-heading-show {
-  opacity: 1;
-  transition: opacity 200ms;
-}
-
-.vertical-heading-hide {
-  opacity: 0;
-  transition: opacity 200ms;
+.horizontal-heading {
+  padding: 1%;
 }
 
 .arrow-container {
-  opacity: 0.65;
+  opacity: 0;
   background: #AAAAAA;
   height: 100%;
   width: 5%;
   position: absolute;
   left: 0%;
+  transition: opacity 500ms 2000ms;
+}
+
+.arrow-container:hover {
+  opacity: 0.35;
+  transition: opacity 500ms;
 }
 
 .arrow {
+  will-change: transition;
   position: relative;
   top: 45.33%;
   font-size: 50px;
+  transition: transform 300ms;
 }

@@ -6,7 +6,7 @@ class HomeCard extends Component {
 	constructor(props) {
 		super(props);
 		this.props = props;
-		this.children = [];
+		this.children = new Map([]);
 		this.style = {};
 
 		this.initializeChildren();
@@ -20,8 +20,8 @@ class HomeCard extends Component {
 		}
 		let horizontalHeading = functionalComponents.horizontalHeading('Akash Singh', '');
 		let verticalHeading = functionalComponents.verticalHeadingRotatedText('', '');
-		this.children.push(horizontalHeading);
-		this.children.push(verticalHeading);
+		this.children.set('horizontalHeading', horizontalHeading);
+		this.children.set('verticalHeading', verticalHeading);
 	}
 
 	render(){
